@@ -1,0 +1,45 @@
+import random
+import time
+
+b = 5
+o = random.randint(100,150)
+c = float(o)/1
+d = random.randint(1,10)
+
+
+print("How many shares do you want to buy?")
+s = input()
+z = float(s)/1
+n = z * c
+
+print(f"You have invested ${n} and the stock price is {c}")
+
+
+while b == 5:
+    a = round(random.uniform(30,100), 1)
+    p = round(a , 2)
+    if d < 3:
+        f = c + p
+        k = round(f , 2)
+        print(k)
+    else:
+        f = c - p
+        k = round(f , 2)
+        print(k)
+    print("Do you want to sell?")
+    y = input()
+    if y == 'yes':
+        l = k * z
+        j = l - n
+        w = float(j)/1
+        w = round(w , 2)
+        if w < 0:
+            print(f"You lost ${-w}")
+            break
+        else:
+            print(f"You made ${w}")
+            break
+        
+    else:
+        print("Ok!")
+time.sleep(10)
